@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Personal Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom styles here */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mt-4 mb-4">User Personal Information</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Profile Picture -->
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture</label>
+                    <input type="file" class="form-control-file" id="profilePicture">
+                    <img src="placeholder.jpg" alt="Profile Picture" class="mt-3 img-thumbnail">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" value="John" readonly>
+                </div>
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" value="Doe" readonly>
+                </div>
+                <!-- Education -->
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <textarea class="form-control" id="education" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                </div>
+                <!-- Employment -->
+                <div class="form-group">
+                    <label for="employment">Employment</label>
+                    <textarea class="form-control" id="employment" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                </div>
+                <!-- Work History -->
+                <div class="form-group">
+                    <label for="workHistory">Work History</label>
+                    <textarea class="form-control" id="workHistory" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                </div>
+                <!-- Projects -->
+                <div class="form-group">
+                    <label for="projects">Projects</label>
+                    <textarea class="form-control" id="projects" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                </div>
+                <!-- Contact Info -->
+                <div class="form-group">
+                    <label for="contactInfo">Contact Info</label>
+                    <textarea class="form-control" id="contactInfo" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                </div>
+                <!-- Additional Experiences -->
+                <div class="form-group">
+                    <label for="additionalExperiences">Additional Experiences</label>
+                    <textarea class="form-control" id="additionalExperiences" rows="3" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                </div>
+                <!-- Edit Button -->
+                <button class="btn btn-primary" id="editButton">Edit</button>
+                <!-- Save Button (hidden initially) -->
+                <button class="btn btn-success d-none" id="saveButton">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, if needed) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- jQuery (optional, if needed) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Edit button click event
+            $('#editButton').click(function() {
+                // Enable all input fields for editing
+                $('input, textarea').removeAttr('readonly');
+                // Show save button and hide edit button
+                $('#saveButton').removeClass('d-none');
+                $(this).addClass('d-none');
+            });
+
+            // Save button click event
+            $('#saveButton').click(function() {
+                // Disable all input fields to prevent editing
+                $('input, textarea').attr('readonly', true);
+                // Hide save button and show edit button
+                $(this).addClass('d-none');
+                $('#editButton').removeClass('d-none');
+            });
+        });
+    </script>
+</body>
+</html>
