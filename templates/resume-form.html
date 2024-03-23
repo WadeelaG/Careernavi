@@ -28,9 +28,7 @@
 </head>
 
 <body>
-  
-   <!-- Nav Menu Section Start-->
-    <nav class="navbar navbar-expand-lg  py-4 navigation header-padding nav-text-white" id="navbar">
+    <nav class="navbar navbar-expand-lg  py-4 navigation header-padding nav-text-white bg-1" id="navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img src="/static/images/logo-w.png" alt="" class="img-fluid hidden-logo">
@@ -55,7 +53,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdown05">
                       <li><a class="dropdown-item" href="resume-form.html">Resume AI</a></li>
                       <li><a class="dropdown-item" href="coverletter-form.html">Cover Letter AI</a></li>
-                      <li><a class="dropdown-item" href="blog-single.html">AutoApply</a></li>
+                      <li><a class="dropdown-item" href="#">AutoApply</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -65,174 +63,106 @@
             </div>
         </div>
     </nav>
-    <!-- Nav Menu Section End-->
 
-    <!-- Menu down expansation -->
-<section class="page-title bg-1">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block text-center">
-          <span class="text-white">Contact Us</span>
-          <h1 class="text-capitalize mb-5 text-lg">Get in Touch</h1>
 
-          <ul class="list-inline breadcumb-nav">
-            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">/</span></li>
-            <li class="list-inline-item"><a href="#" class="text-white-50">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- contact form start -->
-<section class="contact-form-wrap section">
+
+<!-- resume form start -->
+<section class="resume-form-wrap section-resume">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
-        <span class="text-color">Send a message</span>
-        <h3 class="text-md mb-5">Contact Form</h3>
+        <span class="text-color">Generate Resume</span>
+        <h3 class="text-md mb-5">Enter your Information</h3>
 
         <div class="row">
           <div class="col-lg-8">
-            <form id="contact-form" class="contact__form " method="post" action="mail.php">
+            <form id="resume-form" class="resume__form " method="post">
               <!-- form message -->
               <div class="row">
                 <div class="col-12">
-                  <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                    Your message was sent successfully.
+                  <div class="alert alert-success resume__msg" style="display: none" role="alert">
+                    Your biodata was sent successfully.
+                  </div>
+                </div>
+              
+      <!-- 1st Column of Form-->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input name="firstName" id="firstName" type="text" class="form-control" placeholder="Your First Name">
+                </div>
+
+                <div class="form-group">
+                  <input name="subject" id="subject" type="text" class="form-control" placeholder="Your Subject">
+                </div>
+
+                <div class="form-group">
+                  <input name="phoneNumber" id="phoneNumber" type="tel" class="form-control" placeholder="Your phone number">
+                </div>
+
+                <div class="form-group">
+                  <input name="address" id="address" type="text" class="form-control" placeholder="House Address">
+                </div>
+
+                <div class="form-group-2 mb-4">
+                  <textarea name="experience_para" id="experience_para" class="form-control" rows="4"
+                    placeholder="Any additinal experience"></textarea>
+                </div>
+                <button class="btn btn-main" name="submit_resume_form" type="submit" id="resume-submit" >Generate Resume</button>
+            </div>
+
+            <!-- 2nd Column of Form-->
+                <div class="col-lg-6">
+
+                  <div class="form-group">
+                    <input name="lastname" id="lastname" type="text" class="form-control" placeholder="Your Last Name">
+                  </div>
+                  <div class="form-group">
+                    <input name="jobtitle" id="subject" type="jobtitle" class="form-control" placeholder="Job Title">
+                  </div>
+                  <div class="form-group">
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Email Address">
+                  </div>
+                  <div class="form-group ">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Select Your Region</option>
+                      <option>Punjab</option>
+                      <option>KPK</option>
+                      <option>Balochistan </option>
+                      <option>Sindh</option>
+                      <option>GB</option>
+                    </select>
                   </div>
                 </div>
               </div>
-
-              <div class="form-group">
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>I Need help in ...</option>
-                  <option>Resume Generating</option>
-                  <option>Cover Letter</option>
-                  <option>Auto Apply Jobs </option>
-                  <option>Job Searching</option>
-                  <option>Process Query</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <input name="subject" id="subject" type="text" class="form-control" placeholder="Your Subject">
-              </div>
-
-              <div class="form-group">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name">
-              </div>
-
-              <div class="form-group">
-                <input name="email" id="email" type="email" class="form-control" placeholder="Email Address">
-              </div>
-
-              <div class="form-group-2 mb-4">
-                <textarea name="message" id="message" class="form-control" rows="4"
-                  placeholder="Your Message"></textarea>
-              </div>
-              <button class="btn btn-main" name="submit" type="submit">Send Message</button>
             </form>
           </div>
 
           <div class="col-lg-4">
-            <div class="short-info mt-5 mt-lg-0">
-              <ul class="list-unstyled">
-                <li>
-                  <h5>Call Us</h5>
-                  +92 XXX XXX XXXX
-                </li>
-                <li>
-                  <h5>Email Us</h5>
-                  career.navi.fyp@gmmail.com
-                </li>
-                <li>
-                  <h5>Address</h5>
-                    Karnal Sher Khan Shaheed Road, Sector I-12,
-                    Islamabad.
-                    44000
-                </li>
-              </ul>
-
-              <ul class="social-icons list-inline mt-5">
-                <li class="list-inline-item">
-                  <a href="http://www.themefisher.com"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="http://www.themefisher.com"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="http://www.themefisher.com"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-              </ul>
-            </div>
+              <div class="img-wrap">
+                <img src="/static/images/forms/resume.jpg" alt="resume form" class="img-fluid">
+              </div>
           </div>
         </div>
       </div>
     </div>
 
-<!--
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="contact-content pl-lg-5 mt-5 mt-lg-0 mb-5 mb-lg-0">
-          <h4 class="mb-4">Corporate Office</h4>
 
-          <ul class="address-block list-unstyled">
-            <li>
-              <i class="ti-location-pin mr-3"></i>North Main Street,Brooklyn Australia
-            </li>
-            <li>
-              <i class="ti-email mr-3"></i>Email: contact@mail.com
-            </li>
-            <li>
-              <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="contact-info mb-5 mb-lg-0 mt-md-5 mt-lg-0">
-          <h4 class="mb-4">USA Location</h4>
-          <ul class="address-block list-unstyled">
-            <li>
-              <i class="ti-location-pin mr-3"></i>North Main Street,Brooklyn Australia
-            </li>
-            <li>
-              <i class="ti-email mr-3"></i>Email: contact@mail.com
-            </li>
-            <li>
-              <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="contact-info ">
-          <h4 class="mb-4">Europe</h4>
-          <ul class="address-block list-unstyled">
-            <li>
-              <i class="ti-location-pin mr-3"></i>North Main Street,Brooklyn Australia
-            </li>
-            <li>
-              <i class="ti-email mr-3"></i>Email: contact@mail.com
-            </li>
-            <li>
-              <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    -->
   </div>
 </section>
-<!-- contact form end -->
 
+<!-- Script to open the generated resume in a new tab -->
+<script>
+      
+  document.getElementById("coverletter-submit").addEventListener("click", function() {
+    window.open("coverletter-output.html", "_blank"); 
+  });
+</script>
+<script>
+document.getElementById("resume-submit").addEventListener("click", function() {
+  window.open("resume-output.html", "_blank"); 
+}); 
+</script>
 
 <!-- footer Start -->
 <footer class="footer section">
@@ -297,7 +227,7 @@
 		</div>
 	</div>
 </footer>
-<!-- footer End -->
+<!-- footer End -- >
    
 
     <!-- 

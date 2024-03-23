@@ -258,9 +258,10 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   scrollbar-width:none
 
 }
-.section-coverletter-output pre{
+.section-coverletter-output textarea{
+  height: fit-content;
   text-wrap: wrap;
-  scrollbar-width:none;
+  scrollbar-width:thin;
   font-weight:normal;
   font-size: 16px;
   line-height: 30px;
@@ -269,6 +270,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   background: #f7f7f7;
   padding: 20px;
   border-radius: 5px;
+  border-bottom: 1px solid #6196A6;
   box-shadow: 0px 0px 40px 0px rgba(85, 128, 255, 0.2);
 }
 

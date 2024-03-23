@@ -12,11 +12,6 @@
 
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.min.css">
-
-  <!-- Bootstrap 5.3.3 dist min css Files-->
-  <link rel="stylesheet" href="/static/plugins/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-
-
   <!-- Icon Font Css -->
   <link rel="stylesheet" href="/static/plugins/themify/css/themify-icons.css">
   <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
@@ -58,7 +53,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdown05">
                       <li><a class="dropdown-item" href="resume-form.html">Resume AI</a></li>
                       <li><a class="dropdown-item" href="coverletter-form.html">Cover Letter AI</a></li>
-                      <li><a class="dropdown-item" href="blog-single.html">AutoApply</a></li>
+                      <li><a class="dropdown-item" href="#">AutoApply</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -72,28 +67,30 @@
 
 
 
-<!-- Cover Letter output form start -->
-<section class="coverletter-output-form-wrap section-coverletter-output">
+<!-- resume form start -->
+<section class="resume-form-wrap section-resume">
   <div class="container">
-    <div class="row m-5  ">
-      <div class="col-lg-12 col-md-12 col-sm-12 my-5" >
-        <h3 class="text-md mt-5 mb-5">Get Your AI Generated CoverLetter</h3>
-      </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8 ">
-            <textarea id="editableCoverLetter" class="form-control" rows="20">{{ cover_letter }}</textarea>          
-            <a href="/download_cover_letter/docx" class="btn btn-main mt-4 mb-5">Download as DOCX</a>
-            <a href="/download_cover_letter/pdf" class="btn btn-main mt-4 mb-5">Download as PDF</a>
-
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h3 class="text-md mt-5 mb-5">Get Your AI Generated Resume</h3>
+        <div class="row">
+          <div class="col-lg-8" style="border: 1px solid black;">
+            <!-- Resume Generated Text-->
           </div>
 
+          <div class="col-lg-4">
+              <div class="img-wrap">
+                <img src="/static/images/forms/resume.jpg" alt="resume form" class="img-fluid">
+              </div>
+          </div>
+          <button class="btn btn-main mt-2">Download Resume</button>
         </div>
-
+      </div>
     </div>
+
+
   </div>
 </section>
-
-
 
 <!-- footer Start -->
 <footer class="footer section">
@@ -158,13 +155,13 @@
 		</div>
 	</div>
 </footer>
-<!-- footer End --
+<!-- footer End -- >
    
 
     <!-- 
     Essential Scripts
     =====================================-->
-  
+
     
     <!-- Main jQuery -->
     <script src="/static/plugins/jquery/jquery.js"></script>
@@ -172,10 +169,6 @@
     <!-- Bootstrap 4.3.2 -->
     <script src="/static/plugins/bootstrap/js/popper.js"></script>
     <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-    <!--Bootstrap-5.3.3 -->
-    <script src="/static/plugins/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-
    <!--  Magnific Popup-->
     <script src="/static/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <!-- Slick Slider -->
@@ -188,6 +181,6 @@
 
      
     <script src="/static/js/script.js"></script>
-    <script src="/static/js/downlaod.js"></script>  
+
   </body>
 </html>
