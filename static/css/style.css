@@ -231,13 +231,78 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .section-resume {
+  position: relative;
   margin-top: 40px;
   padding: 100px 0px;
 }
 
-.section-resume img {
-  border-radius: 5px;
+.section-resume label{
+  color: black;
+  font-size: medium;
+  font-weight: bold;
 }
+
+ /* Resume Profile Image Styling */
+.profile-image {
+   border-radius: 50%;
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+}
+
+/* Resume Profile Side Panel Styling Starts */
+.side-panel {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height:100%;
+  background-color: #6196A6;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+.side-panel:hover {
+  width: 250px; /* Expand on hover */
+}
+
+.side-panel-content {
+  padding: 20px;
+}
+
+.resume-sections {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-sections li {
+  margin-bottom: 10px;
+}
+
+.resume-sections li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.resume-sections li a:hover {
+  color: #555;
+}
+
+.form-container {
+  margin-left: 220px; /* Adjust margin to accommodate expanded panel */
+  transition: margin-left 0.3s ease;
+}
+
+.side-panel:hover + .form-container {
+  margin-left: 270px; /* Adjust margin when panel expands */
+}
+
+/* Resume Profile Side Panel Styling Ends */
+
+
 
 .section-coverletter {
   margin-top: 40px;
