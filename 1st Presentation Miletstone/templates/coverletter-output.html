@@ -81,8 +81,10 @@
       </div>
         <div class="row justify-content-center">
           <div class="col-lg-8 ">
-                <pre> {{ cover_letter }} </pre>          
-                <button class="btn btn-main mt-4 mb-5">Download CoverLetter</button>
+            <textarea id="editableCoverLetter" class="form-control" rows="20">{{ cover_letter }}</textarea>          
+            <a href="/download_cover_letter/docx" class="btn btn-main mt-4 mb-5">Download as DOCX</a>
+            <a href="/download_cover_letter/pdf" class="btn btn-main mt-4 mb-5">Download as PDF</a>
+
           </div>
 
         </div>
@@ -90,7 +92,6 @@
     </div>
   </div>
 </section>
-
 
 
 
@@ -163,7 +164,7 @@
     <!-- 
     Essential Scripts
     =====================================-->
-
+  
     
     <!-- Main jQuery -->
     <script src="/static/plugins/jquery/jquery.js"></script>
@@ -187,6 +188,6 @@
 
      
     <script src="/static/js/script.js"></script>
-
+    <script src="/static/js/downlaod.js"></script>  
   </body>
 </html>

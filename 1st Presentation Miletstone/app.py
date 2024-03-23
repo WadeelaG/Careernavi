@@ -1,15 +1,17 @@
-from flask import Flask, request, render_template, redirect, url_for, session
-from cover_letter import CoverLetterGenerate
+from flask import Flask, request, render_template, redirect, url_for, session, send_file
+from cover_letter import CoverLetterGenerate  # Adjusted import
+from docx import Document
+from fpdf import FPDF
+import os
+import io
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Set to a unique secret value for session management
 
-app.debug = True
 
 @app.route('/index.html')
 def index():
     return render_template('index.html')
-
 
 @app.route('/service.html')
 def service():
@@ -47,6 +49,14 @@ def blog_single():
 def contact():
     return render_template('contact.html')
 
+@app.route('/PerInfo.html')
+def PerInfo():
+    return render_template('PerInfo.html')
+
+@app.route('/Dummy 1 Profile.html')
+def profile():
+    return render_template('Dummy 1 Profile.html')
+
 
 @app.route('/cover_letter', methods=['GET', 'POST'])
 def cover_letter():
@@ -57,14 +67,10 @@ def cover_letter():
         company_name = request.form['companyName']
         phone_number = request.form['phoneNumber']
         email_address = request.form['emailAddress']
-        house_address = request.form['houseAddress']
-        region = request.form['region']
-        additional_experience = request.form['additionalExperience']
+        experience = request.form['experience']  # Assume this field is added to the form
         
-        print(f"Received form data: {request.form}")  # Print the form data to the console
-
-        # Create an instance of your cover letter generator
-        generator = CoverLetterGenerate(applicant_name, job_title, company_name, phone_number, email_address, house_address, region, additional_experience)
+        # Create an instance of the cover letter generator
+        generator = CoverLetterGenerate(applicant_name, job_title, company_name, phone_number, email_address, experience)
         cover_letter = generator.generate_cover_letter()
 
         # Store the cover letter in the session
@@ -83,9 +89,32 @@ def cover_letter_output():
     cover_letter = session.get('cover_letter', None)
     return render_template('coverletter-output.html', cover_letter=cover_letter)
 
-@app.route('/profile')
-def profile():
-    return render_template('profile.html')
+
+def save_cover_letter_as_docx(cover_letter, filename="Cover_Letter.docx"):
+    doc = Document()
+    doc.add_paragraph(cover_letter)
+    doc.save(filename)
+
+def save_cover_letter_as_pdf(cover_letter, filename="Cover_Letter.pdf"):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    pdf.multi_cell(0, 10, cover_letter)
+    pdf.output(filename)
+
+@app.route('/download_cover_letter/docx',methods=['GET'])
+def download_cover_letter_docx():
+    cover_letter = session.get('cover_letter', 'No cover letter generated.')
+    filename = "Cover_Letter.docx"
+    save_cover_letter_as_docx(cover_letter, filename)
+    return send_file(filename, as_attachment=True)
+
+@app.route('/download_cover_letter/pdf',methods=['GET'])
+def download_cover_letter_pdf():
+    cover_letter = session.get('cover_letter', 'No cover letter generated.')
+    filename = "Cover_Letter.pdf"
+    save_cover_letter_as_pdf(cover_letter, filename)
+    return send_file(filename, as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True)

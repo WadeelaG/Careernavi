@@ -1,0 +1,4 @@
+{
+    "api-key" : "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",
+    "additional_prompt_options": "Dont add anything extra like company, address, city or state(zip) anything on top just start it with Dear Hiring Manager. Make it more long and explained of atleast 600 words add some extra wording by yourslef.Add given name in place of [yourname] and then phone number and mail in the end. When referencing the job advert, Dont be too literal or too wordy."
+}
