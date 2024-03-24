@@ -250,57 +250,52 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
    object-fit: cover;
 }
 
-/* Resume Profile Side Panel Styling Starts */
-.side-panel {
-  position:fixed;
+/* Resume Profile Sidebar Styling start */
+.section-resume .sidebar {
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 200px;
-  height:100%;
-  background-color: #6196A6;
-  overflow-y: auto;
+  bottom: 0;
+  width: fit-content; /* Adjust as needed */
   z-index: 1000;
-  transition: width 0.3s ease;
-}
-
-.side-panel:hover {
-  width: 250px; /* Expand on hover */
-}
-
-.side-panel-content {
+  /* Ensure sidebar is above other content */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  background-color: #6196A6;
+  color: #ffffff;
   padding: 20px;
+  transition: height 0.3s ease; /* Smooth transition for height change */
+  
+}
+.sidebar.expanded {
+  height: 100vh; /* Expand sidebar to cover the whole viewport */
 }
 
-.resume-sections {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.resume-sections li {
-  margin-bottom: 10px;
-}
-
-.resume-sections li a {
-  color: #333;
-  text-decoration: none;
+.section-resume .sidebar a {
   display: block;
+  font-weight: bolder;
+  color: #ffffff;
+  padding: 10px 0;
+  text-decoration: none;
 }
 
-.resume-sections li a:hover {
-  color: #555;
+.sidebar a:hover {
+  font-weight: bold;
+  color: black;
 }
-
-.form-container {
-  margin-left: 220px; /* Adjust margin to accommodate expanded panel */
-  transition: margin-left 0.3s ease;
-}
-
-.side-panel:hover + .form-container {
-  margin-left: 270px; /* Adjust margin when panel expands */
-}
-
 /* Resume Profile Side Panel Styling Ends */
+
+/*Resume Form card Styling*/
+.section-resume h3 {
+  margin: 20px;
+  border-bottom:1px solid #6196A6;
+}
+/* Resume Profile Card Styling Ends*/
+
+.section-resume .resume-card1 {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 40px 0px rgba(85, 128, 255, 0.2);
+  padding: 30px;
+}
 
 
 
