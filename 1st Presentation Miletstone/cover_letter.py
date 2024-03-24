@@ -3,13 +3,14 @@ import openai
 import json
 
 class CoverLetterGenerate:
-    def __init__(self, applicant_name, job_title, company_name, phone_number, email, experience):
+    def __init__(self, applicant_name, job_title, company_name, phone_number, email, experience,skills):
         self.applicant_name = applicant_name
         self.job_title = job_title
         self.company_name = company_name
         self.phone_number = phone_number
         self.email = email
         self.experience = experience
+        self.skills= skills
         
         # Read the API key from the config file
         with open('config.json', 'r') as f:
@@ -23,6 +24,7 @@ class CoverLetterGenerate:
             f"This is the content of my resume: {self.experience}\n"
             f"Write a cover letter for the following job advert: {job_ad}\n"
             f"{additional_prompt_options}\n\n"
+            f"This is skills that i have:{self.skills}\n"
             f"This is name and phone number: {self.applicant_name} {self.phone_number}\n"
             f"This is email: {self.email}"
         )

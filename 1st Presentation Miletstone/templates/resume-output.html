@@ -75,7 +75,7 @@
         <h3 class="text-md mt-5 mb-5">Get Your AI Generated Resume</h3>
         <div class="row">
           <div class="col-lg-8" style="border: 1px solid black;">
-            <!-- Resume Generated Text-->
+            <textarea id="editableCoverLetter" class="form-control" rows="20">{{ resume_content }}</textarea>          
           </div>
 
           <div class="col-lg-4">
@@ -83,7 +83,10 @@
                 <img src="/static/images/forms/resume.jpg" alt="resume form" class="img-fluid">
               </div>
           </div>
-          <button class="btn btn-main mt-2">Download Resume</button>
+          <div>
+            <a href="/download_resume/docx" class="btn btn-main mt-4 mb-5">Download as DOCX</a>
+            <a href="/download_resume/pdf" class="btn btn-main mt-4 mb-5">Download as PDF</a>
+          </div>  
         </div>
       </div>
     </div>
