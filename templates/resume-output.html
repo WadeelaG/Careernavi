@@ -53,7 +53,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdown05">
                       <li><a class="dropdown-item" href="resume-form.html">Resume AI</a></li>
                       <li><a class="dropdown-item" href="coverletter-form.html">Cover Letter AI</a></li>
-                      <li><a class="dropdown-item" href="#">AutoApply</a></li>
+                      <li><a class="dropdown-item" href="blog-single.html">AutoApply</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -74,8 +74,11 @@
       <div class="col-lg-12 col-md-12 col-sm-12">
         <h3 class="text-md mt-5 mb-5">Get Your AI Generated Resume</h3>
         <div class="row">
-          <div class="col-lg-8" style="border: 1px solid black;">
-            <!-- Resume Generated Text-->
+          <div class="col-lg-8">
+            <form id="resumeUpdateForm" action="/update_resume_content" method="post">
+              <textarea id="editableResumeContent" name="updatedResumeContent" class="form-control" rows="20">{{ resume_content }}</textarea>
+              <button id="updateButton" class="btn btn-main mt-4 mb-5">Update Resume Content</button>
+            </form> 
           </div>
 
           <div class="col-lg-4">
@@ -83,14 +86,17 @@
                 <img src="/static/images/forms/resume.jpg" alt="resume form" class="img-fluid">
               </div>
           </div>
-          <button class="btn btn-main mt-2">Download Resume</button>
+          <div>
+            <a href="/download_resume/docx" class="btn btn-main mt-4 mb-5">Download as DOCX</a>
+            <a href="/download_resume/pdf" class="btn btn-main mt-4 mb-5">Download as PDF</a>
+          </div>  
         </div>
       </div>
     </div>
-
-
   </div>
-</section>
+</section>  
+
+
 
 <!-- footer Start -->
 <footer class="footer section">
@@ -181,6 +187,8 @@
 
      
     <script src="/static/js/script.js"></script>
+
+  
 
   </body>
 </html>
