@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="CareerNavi,business,company,agency,resume ai,coverletter ai,autoapply">
+	<meta name="author" content="Team Nutech CS 20">
+
+  <title>CareerNavi - AI Company</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico" />
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Font Awesome for icons -->
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>  
+
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico" />
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="/static/plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="/static/plugins/magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/static/plugins/modal-video/modal-video.css">
+    <link rel="stylesheet" href="/static/plugins/animate-css/animate.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <style>
+    .flex{
+        display: flex;
+    }
+    .w-33{
+        width: 33.33%;
+    }
+    .w-80{
+        width: 80%;
+    }
+    .h-58vh{
+        height: 58vh;
+    }
+    .nav-item{
+        padding : 20px 0px;
+        cursor: pointer;
+    }
+    .nav-custom{
+        border-bottom: 1px solid #000;
+    }
+    .selected-nav-item{
+        background-color: #d6d4d4;
+    }
+    .border-around{
+        border: 2px solid #000;
+        border-radius: 20px;
+    }
+
+    .profile-card {
+        max-width: 600px;
+        margin: 50px auto;
+        border: 1px solid #dee2e6;
+        border-radius: 0.5rem;
+        padding: 15px;
+        background-color: #fff;
+        border: 2px solid #4c5ba4; /* Purple border */
+      }
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+      }
+      .info-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .info-list li {
+        border-bottom: 1px solid #dee2e6;
+        padding: 10px;
+      }
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+      .btn-custom {
+        width: 100%;
+        border-radius: 10;
+        background-color: #4c5ba4;
+        color: white;
+        border: #4c5ba4;
+      }
+      .navbar-custom {
+        background-color: #e3f2fd;
+        padding: 10px 15px;
+      }
+      .navbar-nav {
+        flex-direction: row;
+      }
+      .nav-link {
+        margin-right: 20px;
+      }
+      .nav-link.active {
+        font-weight: bold;
+        color: blue;
+      }
+      .edit-icon {
+        cursor: pointer;
+        margin-left: 10px;
+        color: #4c5ba4;
+      }
+      .input-group {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        margin-bottom: 10px;
+      }
+      input:focus {
+        box-shadow: none;
+        border-color: #4c5ba4;
+      }
+      label {
+        font-weight: bold;
+        margin-right: 10px;
+        width: 20%;
+        text-align: left;
+      }
+      .input-group-text {
+        border: none;
+        background: transparent;
+        padding: 0;
+      }
+      .bottom-nav{
+        margin-top: 129px !important;
+      }
+  </style>
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg  py-4 navigation header-padding nav-text-white bg-1" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                  <img src="/static/images/logo-w.png" alt="" class="img-fluid hidden-logo">
+                  <img src="/static/images/logo.png" alt="" class="img-fluid mobile-logo">
+              </a>
+    
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+                <ul class="navbar-nav m-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                   <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                   
+                   <li class="nav-item"><a class="nav-link" href="project.html">Find Jobs</a></li>
+                   <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CareerNavi<i class="fa fa-angle-down ml-2"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                        <li><a class="dropdown-item" href="resume-form.html">Resume AI</a></li>
+                        <li><a class="dropdown-item" href="coverletter-form.html">Cover Letter AI</a></li>
+                        <li><a class="dropdown-item" href="#">AutoApply</a></li>
+                    </ul>
+                </li>
+                   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+    
+                <a href="login-form.html" class="btn btn-solid-white d-none d-lg-block">Login <i class="fa fa-angle-right ml-2"></i></a>
+              </div>
+            </div>
+        </nav>
+        <nav id="bottom-nav" style="margin-top: 129px;  ">
+            <div class="flex nav-custom text-center">
+                <div id="dashboard-btn" class="w-33 nav-item selected-nav-item">
+                    Dash Board
+                </div>
+                <div id="edit-profile-btn" class="w-33 nav-item">
+                    Edit Profile
+                </div>
+                <div id="edit-password-btn" class="w-33 nav-item">
+                    Edit Password
+                </div>
+            </div>
+        </nav>
+        <section id="dashboard">
+            <div class="flex justify-content-center align-items-center py-5">
+                <div class="border-around w-80 h-58vh" style="padding-top: 20px;">
+                    <div class="flex justify-content-center">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAmAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwEDBAUGAgj/xABEEAABAwMCAgcFAwkFCQAAAAABAAIDBAURBiESMQcTQVFhcYEUIjKRoUJisRUjM1JygrLB8DRzktLiJCVDU2OEotHh/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAEEBQMCBv/EACQRAAMAAgEEAQUBAAAAAAAAAAABAgMRMQQSIUETBSIyUYFx/9oADAMBAAIRAxEAPwCcUREAREQBUyBz2Vt8uNgrLnF3MoC86UD4VbfM7Gccu4ZXhaDXV9fpzTNTcoXME7HMbC14yHuLgOHHzQFa/W1ltlS2nutVUUL3/C6po5WMd5P4eH6rcUVdTV9OyooaqKohfu2SKQOafUKOqXXdg1hpy4UF/ijo5xTve6KV2WOwMh0b9twRnHMY9VEundQ3LTdbHWWud0ZJ/OxH4Jh3OHb58wvHceu0+pg53ME4717Ejh25ULV/ShX2+spLhQSRVturoy99vqCBJSStOHsDwM4zuMg5z3KR9Jatteq6N01ukLJo8ddTS7SRE947R4jZetojTOlbMPtDCuAg8liKoJadjhSQZaK0yXPxK5nPJAVREQBERAEREAWPJJxbN5dqrM/fhHqVaQBERAUcQ1pLiGtAySTjAXz90o6uGp7s2monf7sonHqiP+M/kX+XMD1712XTVqaSjpIdP0by19WzrKsg8ouQZ+8c58BjtUT2u0XC7zmK20j5iPicNmM83HYfiuV1o644bMDzHJeX8gu+pOjGue0GquFPAcfCyMyfzCvT9GTWAD8sOP8A23+pV/mheyyumyP0Rz3rOsd2rLFdILlbpOCohO2eT29rXDuP/wB7F1NV0cVjGk0tfTzH9V8ZjPzyVyt0tFwtMvV3CkkhyfddjLXeThsV0nJNPwzxeG5X3I+ntPXimv1ko7pSZEdTGHcJ5sdyc0+IOQtgol6Bbu58FzssjsiJzamHfsd7rx8w0/vKWlYT8FVrTCuRyY2KtopIMsHIVVjxvwcLIQBERAFblfwtVxYsjuJ3ggPKIiAIiICDNR2mfVXSjdoHktpaR8bZZBzbGGDAHiST9V39BRU1upI6SihZDBGMNY0befifFeb0bXp65XCsraqGm9umbK50rscRDGtwO/Zv1Kwm6ltb945ah7f1mUcxHoeDdZfUOqppcGv0qiYT9m3WPV/Z9VhDUdny0SV8cPEcD2hros/4wFfq6um6tsntEPBjJd1gACr9rXouTc75PKsVtJT11M+mq4mywvGHNd/WywzqC07llY2Ycv8AZ2Ol/hBXl+orZEOKaWaNuM8T6SZo+ZbgKey15SJdw/DaNPoK0y6a6S4aZrnOpaunlEL+9owcHxBx9FNK4XTclDd7nRVlLURTsp3uc18bsgEsII+v0XdrVwW6jzyYnVQoyfbwUREXYrFQr8LsjHasdemO4XAoDKREQHmQ4YSsVX5zsArCAIiIArdRL1MMkmM8DS7zVxeZmCWJ0bjs5pCiuD1OtrZGGsaaK4/k641zeskpq+EcROwY57Q4EcsbBdLuPdzgDsWHW25lTSVVtrAQ14LH8JwR3EHv2BBVqmZdYImxSupangGOuJcwu7sgA7+qxqba035N1JTW1wzMqmQSU8grGRyQ8JL2yNBaWjnnKi92jaWntNHepeLedlTNSuYOBsJeCRjGdmnf1UhzUFTXfm7hPF7NnL6eFmOs8HOO+M42AGcLIrWtc3hc0FpBaQRsR3KYtwR8fyPyWImtjYGRBrWD4WsAAA8FU4dkPwWY3B5LAhpaqjHVUtQx9M39HHO08TB3cQO48wV4rIblWQPpuOnpWSgsfLE5z38J58IIABx2ry1t8nbu8a0YWjIhabSKyhyySpmfKXc+IcRA27uEBStSy+0U0U2MdYwOwuBgowGUtBRMIDQIo29zQMD6KQKeMQU8cLeUbQ35K/0tVTp+jN66YmZXs9oiK4ZoREQGTEctCLxAeYVUB5n5tVpXZ/iHkrSAIiIAiIgNbe4A6FkzQA5pwfI8lpV1U0bZonxu5OGFzE8ToJnRPHvN+qzesx6rv/Zq9Dl3PY+UeDvzWPV/Z9VkLHq/s+qpmhPJjoiuU0D6qoZDEPed2ns8VKW/CPVPtW2b7TVMGwOqHNBc44a48wFulbp4mwQMhYPdY0AeKuLZxR2QpPnc2T5MjoIiLocgiIgLsHxFFSD4vRVQFZxyVlZEw9wlY6AIiIAiKkj2RRuklc1jGjJc44A8yUBXIG55Lmb9JwXJwad+BoO/0Wm1l0jUdDSyUthnjqq14I65u8cHjn7R7seq2Ol7cajSFvNTI59VLGah8rzlxfIeI5+ePRc+pwu8ZZ6TKsWROuDwyZru3fxVqqc33dx29q8zQSU8hZKMEdiw6v7HmVi6aemb6lNbRcfNG3tyVnaZlL7y3iOMxuDRnmf6ytRFE+Z4ZG3Lir+oaExaWrxSyPZUxx9cyVhw4PYQ4YPpj1VrpcLu1RT63NMY3Ptkhqij3RPSVRV9Iyl1DPHS1rAAKh/uxzjvz9k9+dv5SBG9ksbZIntex27XNIII8CFquWuTDPSIigBERAXacblF6gHu5RAXHDIwsUjBI7llrR6uvcGnLS+5TxSSgODGxs2LnHlv2DxRA2A35LU3vU1msbT+Uq6ON/ZE335D+6N1Dl+6Qb/eA6NtR7DA7nFSuIPkX8z9FyxJJJcSSeZO5K7zhfsgky+dLMzsx2GhbGP+fV7nzDAcfM+i4K8Xu53p/FdK2apGdmOOGDyaNgtei7qJXBBR3wnyX0dYxiy0A7qaMf8AiF85YyvoHR1WKzSNoqiedK1jz95nun6tK5Z+ESbKsp4KiIioxhu/Fy4Vwdbcbf8AlBkImkMGSOv4dvl3eKkeKPPvSDyaezzUZ1lnhbrD2AOaacTFxb4YDuH+Szs2KaabRsfTWqVqm/C2dRTQwxRfmG7Hfi7XK1dd7ZVjvgePoVnSw/aYN+0DtWo1NVex6YulUMDgp3NafvOHCPqR81YiUtJGTVOntvZBTPhHktjZr3c7HJx2mtmpsnJYw+6T4tOx+S1wGBhVV7W+TyShYul2dnDHf6Bkv/XpBwn1Y44+R9FIdi1VZL+0fkuvjkk5mF+WSN82HBXzYgJDg4HBG4I2IK5ViT4CPqzCDcgDtXz/AGDpD1DZuGN1T7fTt5Q1hLzjuD/iHrlTTo7UNNqe1NuNLE+HhcWSxP34HjmM9o35rjUOSToWjDQFRekXgBYd3t1PdrdUUFYzjgnYWOHb5juI5rMRAfMeo7JU6eu89uqxl0ZzHJ2SMPJw/n3HIWsX0XrfSdPqq2dS8iKri96nnx8J7j909q+fbjb6u11stFcIXQ1ERw5jvxB7R4q5jtUiDGREXQgKauh+rFRpR1OcE01S8Y7g73h+JUKqSehOt4bjc6B5/SwtnYPFp4T/ABNXLKtySiWxuVE1VWF2pfbOI71pOfu8WPwUqzPMcMjz9hpPyCheZ24d2l2Vn5XrR9B9DxKvkb/WiUcLjelSoEGljACAamoY0jvweL+QXXxO44o3/rNBUZ9MFXxVlsomn4I3zOH7R4R/C5WMa3SMGlptEeoiK2eAiK9R0lRXVUVLRQPnqJXcMcbBkuP9dqEl+yWqqvd1p7bQN4p5zgZ5NaObj4D/ANDtX0xp+z0tis9NbqNuI4W4Ljze7tcfEndaLo+0bDpW3kylstxnANRMOTfuN+6PqV1wVXJfc9IkqiIuYCIiALnNYaQt+qKPhqR1VXG0iCpa33meB72+C6NFKbXlA+Z9S6buWm6vqLnDhriRHOzeOXyPf4HdahfU1dRUtdTOpqyCOeB4w6N7cgqMdSdEjDxz6cquDt9lqXe75NfzHrnzViMyfhkaInXT9GtaKHWdAScCcugP7w2+oC1F3sd1szy26UE9N2cTm5YfJwyPqsKCeSmnhqIf0kMjZWftNOR9V1emgfTVb/Yqj+7d+ChiUe6FMck7Ku1vqIjmOaAvb5FuQodm+ELLzej6b6B+OT+Em039lh/u2/goX6RKsVerqwg56jhhHhwjl8yVMrJWQUDZpSBHHDxuPgG5K+eZ6h9XPLVS/pJ5HSuz3uJJ/FXMC9nzmX83/p4QLOtNmud5fwWqgnqncsxt931dyHzUkaa6IJH8E+pangbnPslK7c+Dn/5fmu1Wp5PBHmn7BctRVwpLVTmV4/SPOzIh3ud2fip50Roig0rTcTSKm4PbiWqc3B/ZaPst/HtXQWy20VrpGUtvpo6eBnJkYwPPxPistV7yOvBJQDCqiLmAiIgCIiAIiIAiIoB5kY2Rha9oc08wRkFc5X6E0xXF7pLRTxPdkl9O3qiT3+7hEXpNoGypLZT2+0st9OZOohi6tnG7icGjluea4V+lqJx3nqf8Tf8AKiLxa2zR6DNeNV2PR2Etjpa+2SUVQ6bqZYurdwO4TjHeAsO39H2laEgss8EzhvmpHW/R2QiL2m9GdvflnSQRxwsDIY2xsbsGsGAPRXURQAiIgCIiAIiID//Z"  />
+                    </div>
+                    <p style="font-size: 30px; font-weight: 800; text-align: center; margin: 10px;">Test User</p>
+                    <div class="flex text-center mt-5">
+                        <div class="w-33">
+                            <p style="font-size: 20px;">Jobs Applied</p>
+                            <p style="font-size: 50px;" class="mt-2">0</p>
+                        </div>
+                        <div class="w-33">
+                            <p style="font-size: 20px;">Resume Generated</p>
+                            <p style="font-size: 50px;" class="mt-2">0</p>
+                        </div>
+                        <div class="w-33">
+                            <p style="font-size: 20px;">Cover Letter Generated</p>
+                            <p style="font-size: 50px;" class="mt-2">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="edit-profile" style="display: none;">
+            <div class="flex justify-content-center align-items-center py-5">
+                <div class="border-around w-80 h-58vh" style="padding-top: 20px;">
+                    <form method="POST" action="/update">
+                        <div class="card-body">
+                          <div class="input-group">
+                            <label for="firstname">First Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="{{ user['firstname'] }}"
+                              id="firstname"
+                              name="firstname"
+                              disabled
+                            />
+                            <span class="input-group-text">
+                              <i
+                                class="fas fa-pencil-alt edit-icon"
+                                onclick="toggleEdit('firstname')"
+                              ></i>
+                            </span>
+                          </div>
+                          <div class="input-group">
+                            <label for="lastname">Last Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="{{ user['lastname'] }}"
+                              id="lastname"
+                              name="lastname"
+                            />
+                            <span class="input-group-text">
+                              <i
+                                class="fas fa-pencil-alt edit-icon"
+                                onclick="toggleEdit('lastname')"
+                              ></i>
+                            </span>
+                          </div>
+                          <div class="input-group">
+                            <label for="email">Email</label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              value="{{ user['email'] }}"
+                              id="email"
+                              name="email"
+                            />
+                            <span class="input-group-text">
+                              <i
+                                class="fas fa-pencil-alt edit-icon"
+                                onclick="toggleEdit('email')"
+                              ></i>
+                            </span>
+                          </div>
+                          <div class="input-group">
+                            <label for="address">Address</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="{{ user['address'] }}"
+                              id="address"
+                              name="address"
+                            />
+                            <span class="input-group-text">
+                              <i
+                                class="fas fa-pencil-alt edit-icon"
+                                onclick="toggleEdit('address')"
+                              ></i>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="card-footer text-muted">
+                          <button type="submit" class="btn btn-primary btn-custom">
+                            Save Changes
+                          </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="edit-password"  style="display: none;">
+            <div class="flex justify-content-center align-items-center py-5">
+                <div class="flex justify-content-center border-around w-80 h-58vh" style="padding-top: 20px;">
+                    <form class="w-80">
+                        <div class="mb-3">
+                          <label for="Password1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="Password1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password2" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="Password2">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      </form>
+                </div>
+            </div>
+        </section>
+
+        <script>
+
+            
+            const dashboardBtn = document.getElementById('dashboard-btn');
+            const editProfileBtn = document.getElementById('edit-profile-btn');
+            const editPasswordBtn = document.getElementById('edit-password-btn');
+
+            const dashboardSection = document.getElementById('dashboard');
+            const editProfileSection = document.getElementById('edit-profile');
+            const editPasswordSection = document.getElementById('edit-password');
+            
+            dashboardBtn.onclick = () => {
+                dashboardBtn.classList.add("selected-nav-item");
+                editProfileBtn.classList.remove("selected-nav-item");
+                editPasswordBtn.classList.remove("selected-nav-item");
+
+                dashboardSection.style.display="block";
+                editProfileSection.style.display="none";
+                editPasswordSection.style.display="none";
+            }
+
+            editProfileBtn.onclick = () => {
+                dashboardBtn.classList.remove("selected-nav-item");
+                editProfileBtn.classList.add("selected-nav-item");
+                editPasswordBtn.classList.remove("selected-nav-item");
+                
+                dashboardSection.style.display="none";
+                editProfileSection.style.display="block";
+                editPasswordSection.style.display="none";
+            }
+
+            editPasswordBtn.onclick = () => {
+                dashboardBtn.classList.remove("selected-nav-item");
+                editProfileBtn.classList.remove("selected-nav-item");
+                editPasswordBtn.classList.add("selected-nav-item");
+                
+                dashboardSection.style.display="none";
+                editProfileSection.style.display="none";
+                editPasswordSection.style.display="block";
+            }
+        </script>
+
+        <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function toggleEdit(fieldId) {
+        var input = document.getElementById(fieldId);
+        input.disabled = !input.disabled;
+        if (!input.disabled) {
+          input.focus();
+        }
+      }
+    </script>
+    </body>
+
+
+  </html>

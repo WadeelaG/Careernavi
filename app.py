@@ -104,19 +104,28 @@ def save_cover_letter_as_pdf(cover_letter, filename="Cover_Letter.pdf"):
     pdf.multi_cell(0, 10, cover_letter)
     pdf.output(filename)
 
-@app.route('/download_cover_letter/docx',methods=['GET'])
+@app.route('/download_cover_letter/docx',methods=['GET','POST'])
 def download_cover_letter_docx():
     cover_letter = session.get('cover_letter', 'No cover letter generated.')
     filename = "Cover_Letter.docx"
     save_cover_letter_as_docx(cover_letter, filename)
     return send_file(filename, as_attachment=True)
 
-@app.route('/download_cover_letter/pdf',methods=['GET'])
+@app.route('/download_cover_letter/pdf',methods=['GET','POST'])
 def download_cover_letter_pdf():
     cover_letter = session.get('cover_letter', 'No cover letter generated.')
     filename = "Cover_Letter.pdf"
     save_cover_letter_as_pdf(cover_letter, filename)
     return send_file(filename, as_attachment=True)
+
+
+@app.route('/update_cover_letter', methods=['POST'])
+def update_cover_letter():
+    updated_cover_letter = request.form['updatedCoverLetter']
+    session['cover_letter'] = updated_cover_letter
+    return redirect(url_for('cover_letter_output'))
+
+
 
 
 
@@ -132,13 +141,27 @@ def resume():
         state = request.form['state']
         zipCode = request.form['zipCode']
         objective = request.form['objective']
-        education = request.form['education']
-        experience = request.form['experience']
+
+        # Correctly getting lists from the form
+        degrees = request.form.getlist('degree[]')
+        majors = request.form.getlist('major[]')
+        universities = request.form.getlist('university[]')
+        gradYears = request.form.getlist('gradYear[]')
+        courseworks = request.form.getlist('coursework[]')
+
+        # Assuming you will adjust this logic for multiple entries
+        education_entries = []
+        for i in range(len(degrees)):
+            education_entry = f"{degrees[i]} in {majors[i]}, {universities[i]}, Graduated: {gradYears[i]}, Coursework: {courseworks[i]}"
+            education_entries.append(education_entry)
+        education = " | ".join(education_entries)  # Example of how to concatenate the education entries
+
+        experience = f"{request.form['positionTitle']} {request.form['companyName']} {request.form['location']} {request.form['startDate']} {request.form['endDate']} {request.form['responsibilities']}"
         technicalSkills = request.form['technicalSkills']
         softSkills = request.form['softSkills']
-        certifications = request.form['certifications']
+        certifications = f"{request.form['certificationName']} {request.form['issuingOrganization']} {request.form['yearObtained']}"
         projects = request.form['projects']
-        languages = request.form['languages']
+        languages = f"{request.form['language']} {request.form['proficiencyLevel']}"
         additionalInformation = request.form['additionalInformation']
         linkdinprofile = request.form['linkdinprofile']
         professionalSummary = request.form['professionalSummary']
@@ -191,6 +214,11 @@ def download_resume_pdf():
     save_resume_as_pdf(resume_content, filename)
     return send_file(filename, as_attachment=True)
 
+@app.route('/update_resume_content', methods=['POST'])
+def update_resume_content():
+    updated_resume_content = request.form['updatedResumeContent']
+    session['resume_content'] = updated_resume_content
+    return redirect(url_for('resume_output'))
 
 
 

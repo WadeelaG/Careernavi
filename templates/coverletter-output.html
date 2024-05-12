@@ -81,9 +81,13 @@
       </div>
         <div class="row justify-content-center">
           <div class="col-lg-9 ">
-            <textarea id="editableCoverLetter" class="form-control" rows="20">{{ cover_letter }}</textarea>          
-            <a href="/download_cover_letter/docx" class="btn btn-main mt-4 mb-5">Download as DOCX</a>
-            <a href="/download_cover_letter/pdf" class="btn btn-main mt-4 mb-5">Download as PDF</a>
+            <form action="/update_cover_letter" method="post">
+              <textarea id="editableCoverLetter" name="updatedCoverLetter" class="form-control" rows="20">{{ cover_letter }}</textarea>
+              <button type="submit" class="btn btn-main mt-4 mb-5">Update Cover Letter</button>
+            
+              <a href="/download_cover_letter/docx" class="btn btn-main mt-4 mb-5">Download as DOCX</a>
+              <a href="/download_cover_letter/pdf" class="btn btn-main mt-4 mb-5">Download as PDF</a>
+          </form>
           </div>
 
         </div>
@@ -91,7 +95,6 @@
     </div>
   </div>
 </section>
-
 
 
 <!-- footer Start -->

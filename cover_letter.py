@@ -10,7 +10,7 @@ class CoverLetterGenerate:
         self.phone_number = phone_number
         self.email = email
         self.experience = experience
-        self.skills = skills
+        self.skills= skills
         
         # Read the API key from the config file
         with open('config.json', 'r') as f:

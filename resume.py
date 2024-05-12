@@ -32,7 +32,8 @@ class ResumeGenerate:
         Generates a detailed and formatted resume based on the provided information using GPT-3.5 Turbo.
         """
         content = (
-            "Generate a detailed and professional resume based on the following information:\n\n"
+            "Generate a Europass CV Pattter for this given info"
+            "Generate a detailed and professional resume based on the following given information.Please make good detailed, extensive and professional resume.Based on this information, generate a detailed and professional resume starts with name and ends with linkdin profile link:\n\n"
             f"Full Name: {self.fullname}\n"
             f"Contact Information: Phone: {self.phoneNumber}, Email: {self.emailAddress}, "
             f"Address: {self.address}, City: {self.city}, State: {self.state}, Zip Code: {self.zipCode}\n\n"
@@ -41,12 +42,17 @@ class ResumeGenerate:
             f"Experience: {self.experience}\n\n"
             f"Professional Summary: {self.professionalSummary}\n\n"
             f"Skills: Technical Skills: {self.technicalSkills}, Soft Skills: {self.softSkills}\n\n"
-            f"Certifications: {self.certifications}\n\n"
+            f"Certifications with name,issuign organization and year obrtained so set it according to it: {self.certifications}\n\n"
             f"LinkedIn Profile: {self.linkdinprofile}\n\n"
             f"Projects: {self.projects}\n\n"
-            f"Languages: {self.languages}\n\n"
+            f"Languages and Profcieny: {self.languages}\n\n"
             f"Additional Information: {self.additionalInformation}\n\n"
+            "Education have degree name , major , university name, gradudation year,courses all togther so adjust it accordign to it "
+            "Experience have position title,company name,location,startdate,enddate responsibilties so set it according to it,"
+            "Certifications have certificationa name, issuing organization and year obtained so set it according to it."
             "Please generate a detailed and professional resume, highlighting the key attributes and accomplishments of the applicant."
+            "Dont add anything in start or end just start it with name and end it with lindin profile name "
+            f"Please generate a detailed and explained resume with more detailed jsut add anything relevant to make it more impactfull and dont add summary or anything in the end of resume just add linkdinprofile link in the end and in start after perosnal info add objectives and related info that will be needed in resume"
         )
 
         completion = openai.ChatCompletion.create(
